@@ -4,6 +4,8 @@ import { addProduct, getAllProducts } from '../store';
 
 const product = { name: '', actualAmount: 0, minimumAmount: 0 };
 
+const nameButton = 'Toevoegen';
+
 const addNewProduct = (product) => {
     const newID = getAllProducts.value.length === 0 ? 1 : Math.max(...getAllProducts.value.map(product => product.id)) + 1;
     addProduct({ id: newID, ...product });
@@ -11,5 +13,5 @@ const addNewProduct = (product) => {
 </script>
 
 <template>
-    <ProductForm :product="product" @newProduct="addNewProduct" />
+    <ProductForm :product="product" :nameButtonForSubmit="nameButton" @newProduct="addNewProduct" />    
 </template>

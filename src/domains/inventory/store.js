@@ -13,3 +13,12 @@ const products = ref([
  export const getAllProducts = computed(() => products.value);
 
  export const addProduct = (product) => products.value.push(product);
+
+ export const getProductByID = (id) => computed(() => products.value.find(product => product.id === id));
+
+ export const updateProduct = (updatedProduct) => {
+     const index = products.value.findIndex(product => product.id === updatedProduct.id);
+     if (index !== -1) {
+         products.value[index] = updatedProduct;
+     }
+ }
