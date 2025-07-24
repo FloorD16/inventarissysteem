@@ -11,7 +11,7 @@ const products = getAllProducts;
             <tr>
                 <th></th>
                 <th><RouterLink to="/add" style="padding-right: 30px;">Product toevoegen</RouterLink></th>
-                <th><RouterLink to="/order">Bestellen</RouterLink></th>
+                <th><RouterLink to="/order">Te bestellen producten</RouterLink></th>
                 <th></th>
             </tr>
             <tr>
